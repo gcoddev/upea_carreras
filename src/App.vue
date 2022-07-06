@@ -1,9 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <HeaderCustom />
+    <router-view />
+    <FooterCustom />
+  </div>
 </template>
 
 <style>
@@ -28,3 +28,20 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+<script>
+import HeaderCustom from "@/components/HeaderCustom.vue";
+import FooterCustom from "@/components/FooterCustom.vue";
+
+export default {
+  name: "app",
+  components: {
+    HeaderCustom,
+    FooterCustom,
+  },
+  methods: {},
+  created() {
+    console.log(process.env.URL_API);
+  },
+};
+</script>
