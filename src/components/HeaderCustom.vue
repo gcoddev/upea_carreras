@@ -6,25 +6,29 @@
         <div class="row">
           <div class="col-6 align-self-center text-md-left text-center">
             <ul>
-              <li><a href="about.html">Acerca de</a></li>
+              <li><a href="about.html">Sobre nosotros</a></li>
               <li><a href="contact.html">Soporte</a></li>
               <li class="d-none d-md-inline-block">
-                <p><i class="fa fa-envelope-o"></i> upea@sie.com</p>
+                <p>
+                  <i class="fa fa-envelope-o"></i>
+                  {{ Institucion.institucion_correo1 }}
+                </p>
               </li>
             </ul>
           </div>
           <div class="col-6">
             <ul class="text-right">
               <li class="d-lg-inline-block d-none">
-                <p><i class="fa fa-info-circle"></i> Become An Instructor</p>
+                <p>
+                  <i class="fa fa-phone"></i>
+                  +591
+                  {{ Institucion.institucion_celular1 }}
+                </p>
               </li>
               <li class="d-lg-inline-block d-none">
-                <p><i class="fa fa-briefcase"></i> For Business</p>
-              </li>
-              <li>
-                <p class="add-to-cart-icon">
-                  My Cart <i class="fa fa-cart-arrow-down ml-2"></i>
-                  <span class="count">0</span>
+                <p>
+                  <i class="fa fa-phone"></i>
+                  +591 {{ Institucion.institucion_telefono1 }}
                 </p>
               </li>
             </ul>
@@ -46,9 +50,19 @@
           </button>
         </div>
         <div class="logo">
-          <router-link to="/"
-            ><img src="@/assets/img/logo-2.png" alt="img"
-          /></router-link>
+          <router-link to="/">
+            <div class="logo_carrera">
+              <img
+                :src="
+                  url_api + '/InstitucionUpea/' + Institucion.institucion_logo
+                "
+                alt="img"
+                width="70"
+                height="70"
+              />
+              <h3>{{ Institucion.institucion_nombre }}</h3>
+            </div></router-link
+          >
         </div>
         <!-- <div class="nav-left-part nav-right-part-desktop">
           <label class="single-input-inner right-side-icon">
@@ -116,6 +130,17 @@
   </div>
 </template>
 
+<style scoped>
+.logo_carrera {
+  display: flex;
+  align-items: center;
+}
+.logo_carrera h3 {
+  color: white;
+  padding: 5px;
+}
+</style>
+
 <script>
 import { mapState } from "vuex";
 export default {
@@ -123,8 +148,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapState(["MenuConv", "MenuCur"]),
+    ...mapState(["url_api", "MenuConv", "MenuCur", "Institucion"]),
   },
-  created() {},
 };
 </script>

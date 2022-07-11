@@ -2,9 +2,10 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    HeaderCarrera: [],
+    url_api: 'https://serviciopagina.upea.bo',
     MenuConv: [],
-    MenuCur: []
+    MenuCur: [],
+    Institucion: {},
   },
   getters: {
   },

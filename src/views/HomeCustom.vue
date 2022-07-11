@@ -6,17 +6,16 @@
           <div class="col-xl-6 col-lg-7">
             <div class="banner-inner style-white text-center text-lg-left">
               <h6 class="al-animate-1 sub-title">
-                Save over <span>30%</span> in paid courses
+                {{ Institucion.institucion_mision }}
               </h6>
               <h1 class="al-animate-2 title">
-                Empower yourself from 20k+ courses
+                {{ Institucion.institucion_nombre }}
               </h1>
               <p class="al-animate-3">
-                Macstudy is by far the most anticipated and most requested
-                online course among our learners.
+                {{ Institucion.institucion_objetivos }}
               </p>
               <a class="btn btn-base al-animate-4" href="course.html">
-                All Courses
+                Ver novedades
               </a>
             </div>
           </div>
@@ -95,18 +94,14 @@
             <div class="block-area">
               <div class="row">
                 <div class="col-md-6">
-                  <div
-                    class="single-block-inner single-block-inner-1"
-                  >
+                  <div class="single-block-inner single-block-inner-1">
                     <div class="cat">Most Recent</div>
                     <span>SCHOOL OF</span>
                     <h4>Programming</h4>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div
-                    class="single-block-inner single-block-inner-2"
-                  >
+                  <div class="single-block-inner single-block-inner-2">
                     <div class="cat">Most Recent</div>
                     <span>SCHOOL OF</span>
                     <h4>Data Science</h4>
@@ -763,9 +758,7 @@
     <div class="event-area mg-bottom-120">
       <div class="container">
         <div class="row no-gutters">
-          <div
-            class="col-xl-7 col-lg-6 bg-overlay bg-cover bg-cover-img"
-          >
+          <div class="col-xl-7 col-lg-6 bg-overlay bg-cover bg-cover-img">
             <div class="event-section-title">
               <div class="section-title mb-0 pt-xl-5 style-white">
                 <h5 class="sub-title">Latest Events</h5>
@@ -828,182 +821,6 @@
       </div>
     </div>
     <!--event-area end-->
-
-    <!-- testimonial section start -->
-    <!-- <div class="testimonial-area bg-gray pd-top-115 pd-bottom-120">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-xl-8 col-lg-10 col-md-11">
-            <div class="section-title text-center">
-              <h5 class="sub-title">Peoples Testimonial</h5>
-              <h2 class="title">What peoples say about us</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="testimonial-slider slider-control-dots owl-carousel">
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/1.png"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Alexandra</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/2.png"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Dies Xandra</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/3.png"
-                    ></div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Aleson</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/1.png"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Alexandra</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/2.png"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Dies Xandra</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <img
-                      class="testimonial-thumb"
-                      src="@/assets/img/testimonial/3.png"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Aleson</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="testimonial-thumb"></div>
-                    <img
-                      src="@/assets/img/testimonial/1.png"
-                      class="testimonial-thumb"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <div class="testimonial-details">
-                      <img src="@/assets/img/icon/4.png" alt="img" />
-                      <p>
-                        I found myself working in a true partnership that
-                        results in an incredible experience, and an end product
-                        that is the best.
-                      </p>
-                      <h5>Alexandra</h5>
-                      <span class="author-meta">Student Language</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- testimonial section End -->
 
     <!--blog-area start-->
     <div class="blog-area pd-top-115 mb-5 pb-3">
@@ -1126,9 +943,9 @@
 </template>
 
 <style scoped>
-.banner-img {
+/* .banner-img {
   background-image: url("@/assets/img/banner/1.png");
-}
+} */
 .call-action-img {
   background-image: url("@/assets/img/other/3.png");
 }
@@ -1147,27 +964,22 @@
 </style>
 
 <script>
+import { mapState } from "vuex";
 export default {
-  name: 'HomeCustom',
+  name: "HomeCustom",
   data() {
-    return {
-      Carrera: {}
-    }
+    return {};
   },
-  methods: {
-    async getCarrera() {
-      try {
-        let res = await this.axios.get(process.env.VUE_APP_ROOT_API + '/api/UpeaCarrera/' + process.env.VUE_APP_ID_CARRERA)
-        this.Carrera = res.data.Descripcion
-        console.log(this.Carrera);
-      } catch (error) {
-        console.log('error getCarrera');
-        console.log(error);
-      }
-    }
+  computed: { ...mapState(["url_api", "Institucion"]) },
+  methods: {},
+  updated() {
+    let img =
+      this.url_api +
+      "/InstitucionUpea/Portada/" +
+      this.Institucion.portada[1].portada_imagen;
+    document
+      .querySelector(".banner-img")
+      .setAttribute("style", "background-image: url(" + img + ");");
   },
-  mounted() {
-    this.getCarrera()
-  }
-}
+};
 </script>

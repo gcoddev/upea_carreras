@@ -34,8 +34,7 @@ export default {
   methods: {
     async getMenuConv() {
       try {
-        let res = await this.axios.get(
-          process.env.VUE_APP_ROOT_API + "/api/Tipoconvocatorias"
+        let res = await this.axios.get("/api/Tipoconvocatorias"
         );
         let filterConv = [];
         res.data.forEach((element) => {
@@ -51,8 +50,7 @@ export default {
     },
     async getMenuCur() {
       try {
-        let res = await this.axios.get(
-          process.env.VUE_APP_ROOT_API + "/api/TipoCurso"
+        let res = await this.axios.get("/api/TipoCurso"
         );
         let filterCur = [];
         res.data.forEach((element) => {
@@ -66,10 +64,23 @@ export default {
         console.log(error);
       }
     },
+    async getInstitucion() {
+      try {
+        let res = await this.axios.get("/api/InstitucionUPEA/" +
+            process.env.VUE_APP_ID_INSTITUCION
+        );
+        console.log("Institucion");
+        this.$store.state.Institucion = res.data.Descripcion;
+        console.log(this.$store.state.Institucion);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
   created() {
     this.getMenuConv();
     this.getMenuCur();
+    this.getInstitucion()
   },
 };
 </script>

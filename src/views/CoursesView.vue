@@ -353,9 +353,7 @@ export default {
   methods: {
     async getCourses() {
       try {
-        let res = await this.axios.get(
-          this.url_api + "/api/cursosAll/" + this.id_carrera
-        );
+        let res = await this.axios.get("/api/cursosAll/" + this.id_carrera);
         console.log(res.data);
       } catch (error) {
         console.log("error getCourses");
