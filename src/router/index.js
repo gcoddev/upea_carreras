@@ -3,13 +3,25 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: import('@/views/HomeCustom.vue')
+    name: 'appWrapper',
+    component: () => import('@/pages/AppWrapper.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'homeApp',
+        component: () => import('@/views/HomeCustom.vue')
+      },
+      {
+        path: '/courses',
+        name: 'courses',
+        component: () => import('@/views/CoursesView.vue')
+      },
+    ]
   },
   {
-    path: '/courses',
-    name: 'courses',
-    component: import('@/views/CoursesView.vue')
+    path: '/:pathMatch(.*)*',
+    name: '404_page',
+    component: () => import('@/pages/404Page.vue')
   }
 ]
 

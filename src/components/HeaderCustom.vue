@@ -50,19 +50,19 @@
             ><img src="@/assets/img/logo-2.png" alt="img"
           /></router-link>
         </div>
-        <div class="nav-left-part nav-right-part-desktop">
+        <!-- <div class="nav-left-part nav-right-part-desktop">
           <label class="single-input-inner right-side-icon">
             <input type="text" placeholder="Search Courses" />
             <i class="fa fa-search"></i>
           </label>
-        </div>
+        </div> -->
         <div class="nav-right-part nav-right-part-mobile">
           <a class="search-bar-btn" href="#"><i class="fa fa-search"></i></a>
         </div>
         <div class="collapse navbar-collapse" id="edumint_main_menu">
           <ul class="navbar-nav menu-open">
             <li class="menu-item-has-children current-menu-item">
-              <a href="#">Inicio</a>
+              <a href="#">INICIO</a>
               <ul class="sub-menu">
                 <li><a href="index.html">Home 01</a></li>
                 <li><a href="home-2.html">Home 02</a></li>
@@ -71,22 +71,27 @@
             </li>
 
             <li class="menu-item-has-children">
-              <a href="#">Convocatorias</a>
+              <a href="#">CONVOCATORIAS</a>
               <ul class="sub-menu">
-                <li><a href="about.html">Convocatorias</a></li>
-                <li><a href="course.html">Comunicados</a></li>
-                <li><a href="course.html">Avisos</a></li>
+                <li v-for="(mc, id_mc) of MenuConv" :key="id_mc">
+                  <router-link to="/">{{
+                    mc.tipo_conv_comun_titulo
+                  }}</router-link>
+                </li>
               </ul>
             </li>
             <li class="menu-item-has-children">
-              <a href="#">Cursos</a>
+              <a href="#">CURSOS</a>
               <ul class="sub-menu">
-                <li><router-link to="/courses">Cursos</router-link></li>
-                <li><a href="course.html">Seminarios</a></li>
+                <li v-for="(mc, id_mc) of MenuCur" :key="id_mc">
+                  <router-link to="/">{{
+                    mc.tipo_conv_curso_nombre
+                  }}</router-link>
+                </li>
               </ul>
             </li>
             <li class="menu-item-has-children">
-              <a href="#">Recursos</a>
+              <a href="#">RECURSOS</a>
               <ul class="sub-menu">
                 <li><a href="about.html">Servicios</a></li>
                 <li><a href="course.html">Ofertas academicas</a></li>
@@ -110,3 +115,16 @@
     </nav>
   </div>
 </template>
+
+<script>
+import { mapState } from "vuex";
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapState(["MenuConv", "MenuCur"]),
+  },
+  created() {},
+};
+</script>

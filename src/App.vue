@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <HeaderCustom />
-    <router-view />
-    <FooterCustom />
-  </div>
+  <router-view></router-view>
 </template>
 
 <style>
@@ -30,18 +26,50 @@ nav a.router-link-exact-active {
 </style>
 
 <script>
-import HeaderCustom from "@/components/HeaderCustom.vue";
-import FooterCustom from "@/components/FooterCustom.vue";
-
 export default {
   name: "app",
-  components: {
-    HeaderCustom,
-    FooterCustom,
+  data() {
+    return {};
   },
-  methods: {},
+  methods: {
+    async getMenuConv() {
+      try {
+        let res = await this.axios.get(
+          process.env.VUE_APP_ROOT_API + "/api/Tipoconvocatorias"
+        );
+        let filterConv = [];
+        res.data.forEach((element) => {
+          if (element.tipo_conv_comun_estado == "1") {
+            filterConv.push(element);
+          }
+        });
+        this.$store.state.MenuConv = filterConv;
+      } catch (error) {
+        console.log("error getMenuConv");
+        console.log(error);
+      }
+    },
+    async getMenuCur() {
+      try {
+        let res = await this.axios.get(
+          process.env.VUE_APP_ROOT_API + "/api/TipoCurso"
+        );
+        let filterCur = [];
+        res.data.forEach((element) => {
+          if (element.tipo_conv_curso_estado == "1") {
+            filterCur.push(element);
+          }
+        });
+        this.$store.state.MenuCur = filterCur;
+      } catch (error) {
+        console.log("error getMenuConv");
+        console.log(error);
+      }
+    },
+  },
   created() {
-    console.log(process.env.URL_API);
+    this.getMenuConv();
+    this.getMenuCur();
   },
 };
 </script>

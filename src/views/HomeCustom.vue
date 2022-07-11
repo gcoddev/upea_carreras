@@ -96,8 +96,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div
-                    class="single-block-inner"
-                    style="background-image: url('@/assets/img/other/1.png')"
+                    class="single-block-inner single-block-inner-1"
                   >
                     <div class="cat">Most Recent</div>
                     <span>SCHOOL OF</span>
@@ -106,8 +105,7 @@
                 </div>
                 <div class="col-md-6">
                   <div
-                    class="single-block-inner"
-                    style="background-image: url('@/assets/img/other/2.png')"
+                    class="single-block-inner single-block-inner-2"
                   >
                     <div class="cat">Most Recent</div>
                     <span>SCHOOL OF</span>
@@ -766,8 +764,7 @@
       <div class="container">
         <div class="row no-gutters">
           <div
-            class="col-xl-7 col-lg-6 bg-overlay bg-cover"
-            style="background-image: url('@/assets/img/other/4.png')"
+            class="col-xl-7 col-lg-6 bg-overlay bg-cover bg-cover-img"
           >
             <div class="event-section-title">
               <div class="section-title mb-0 pt-xl-5 style-white">
@@ -1138,4 +1135,39 @@
 .register-img {
   background-image: url("@/assets/img/bg/1.png");
 }
+.single-block-inner-1 {
+  background-image: url("@/assets/img/other/1.png");
+}
+.single-block-inner-2 {
+  background-image: url("@/assets/img/other/2.png");
+}
+.bg-cover-img {
+  background-image: url("@/assets/img/other/4.png");
+}
 </style>
+
+<script>
+export default {
+  name: 'HomeCustom',
+  data() {
+    return {
+      Carrera: {}
+    }
+  },
+  methods: {
+    async getCarrera() {
+      try {
+        let res = await this.axios.get(process.env.VUE_APP_ROOT_API + '/api/UpeaCarrera/' + process.env.VUE_APP_ID_CARRERA)
+        this.Carrera = res.data.Descripcion
+        console.log(this.Carrera);
+      } catch (error) {
+        console.log('error getCarrera');
+        console.log(error);
+      }
+    }
+  },
+  mounted() {
+    this.getCarrera()
+  }
+}
+</script>
