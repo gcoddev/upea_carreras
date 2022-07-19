@@ -47,8 +47,9 @@ Version: 1.0.0
 
 :root {
   --main-color: #01bda6;
+  --main-color-2: #ffffff;
   --main-color-2: #ff7038;
-  --main-color-3: #0066ff;
+  --main-color-3: #29303b;
   --heading-color: #29303b;
   --paragraph-color: #686f7a;
   --body-font: "Open Sans", sans-serif;
@@ -79,6 +80,7 @@ body {
   font-family: var(--body-font);
   line-height: var(--line-height30);
   font-size: var(--body-font-size);
+  background: var(--main-color-2);
 }
 
 h1 {
@@ -586,7 +588,7 @@ ul {
 
 .btn:after {
   content: "";
-  background: #099b89;
+  background: var(--main-color-3);
   position: absolute;
   transition: all 0.3s ease-in;
   z-index: -1;
@@ -615,7 +617,7 @@ ul {
 
 .btn-red {
   color: #fff;
-  background: #ff7038;
+  background: var(--main-color);
 }
 
 .btn-red:hover {
@@ -692,7 +694,7 @@ ul {
 
 .btn-black {
   color: #fff;
-  background: var(--heading-color);
+  background: var(--main-color);
 }
 
 .btn-black:hover {
@@ -1912,7 +1914,7 @@ ul {
 ----------------------------------------------*/
 .navbar-top {
   padding: 9px 0 6px 0;
-  background: var(--heading-color);
+  background: var(--main-color-3);
 }
 
 .navbar-top ul {
@@ -2200,7 +2202,7 @@ ul {
 }
 
 .navbar-area-1.sticky-active {
-  background: var(--heading-color);
+  background: var(--main-color-3);
 }
 
 .navbar-area-1 .nav-right-part-mobile a {
@@ -3136,7 +3138,7 @@ ul {
 }
 
 .single-quote-inner {
-  background: var(--main-color);
+  background: var(--main-color-3);
   padding: 30px 0 30px 30px;
   margin-top: -80px;
   border-radius: 8px;
@@ -4561,7 +4563,7 @@ ul {
 .footer-area {
   position: relative;
   padding-top: 110px;
-  background: #242937;
+  background: var(--main-color-3);
 }
 
 .footer-area .widget {
@@ -4650,7 +4652,7 @@ ul {
   padding: 25px 0;
   position: relative;
   z-index: 2;
-  background: #101c32;
+  background: var(--main-color-3);
 }
 
 .footer-bottom a img {

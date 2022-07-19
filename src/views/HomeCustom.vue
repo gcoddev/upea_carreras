@@ -943,9 +943,9 @@
 </template>
 
 <style scoped>
-/* .banner-img {
+.banner-img {
   background-image: url("@/assets/img/banner/1.png");
-} */
+}
 .call-action-img {
   background-image: url("@/assets/img/other/3.png");
 }
@@ -972,14 +972,26 @@ export default {
   },
   computed: { ...mapState(["url_api", "Institucion"]) },
   methods: {},
+  created() {},
   updated() {
     let img =
       this.url_api +
       "/InstitucionUpea/Portada/" +
-      this.Institucion.portada[1].portada_imagen;
+      this.Institucion.portada[0].portada_imagen;
     document
       .querySelector(".banner-img")
-      .setAttribute("style", "background-image: url(" + img + ");");
+      .setAttribute("style", 'background-image: url("' + img + '");');
+  },
+  mounted() {
+    if (Object.keys(this.Institucion).length != 0) {
+      let img =
+        this.url_api +
+        "/InstitucionUpea/Portada/" +
+        this.Institucion.portada[0].portada_imagen;
+      document
+        .querySelector(".banner-img")
+        .setAttribute("style", 'background-image: url("' + img + '");');
+    }
   },
 };
 </script>

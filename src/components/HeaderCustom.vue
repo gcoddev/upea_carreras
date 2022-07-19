@@ -98,7 +98,7 @@
               <a href="#">CURSOS</a>
               <ul class="sub-menu">
                 <li v-for="(mc, id_mc) of MenuCur" :key="id_mc">
-                  <router-link to="/">{{
+                  <router-link :to="'/' + mc.tipo_conv_curso_nombre">{{
                     mc.tipo_conv_curso_nombre
                   }}</router-link>
                 </li>

@@ -27,60 +27,6 @@ nav a.router-link-exact-active {
 
 <script>
 export default {
-  name: "app",
-  data() {
-    return {};
-  },
-  methods: {
-    async getMenuConv() {
-      try {
-        let res = await this.axios.get("/api/Tipoconvocatorias"
-        );
-        let filterConv = [];
-        res.data.forEach((element) => {
-          if (element.tipo_conv_comun_estado == "1") {
-            filterConv.push(element);
-          }
-        });
-        this.$store.state.MenuConv = filterConv;
-      } catch (error) {
-        console.log("error getMenuConv");
-        console.log(error);
-      }
-    },
-    async getMenuCur() {
-      try {
-        let res = await this.axios.get("/api/TipoCurso"
-        );
-        let filterCur = [];
-        res.data.forEach((element) => {
-          if (element.tipo_conv_curso_estado == "1") {
-            filterCur.push(element);
-          }
-        });
-        this.$store.state.MenuCur = filterCur;
-      } catch (error) {
-        console.log("error getMenuConv");
-        console.log(error);
-      }
-    },
-    async getInstitucion() {
-      try {
-        let res = await this.axios.get("/api/InstitucionUPEA/" +
-            process.env.VUE_APP_ID_INSTITUCION
-        );
-        console.log("Institucion");
-        this.$store.state.Institucion = res.data.Descripcion;
-        console.log(this.$store.state.Institucion);
-      } catch (error) {
-        console.log(error);
-      }
-    },
-  },
-  created() {
-    this.getMenuConv();
-    this.getMenuCur();
-    this.getInstitucion()
-  },
-};
+  name: 'app'
+}
 </script>

@@ -108,10 +108,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-5 align-self-center">
-              <p>Designed & Developed By Love</p>
+              <p>Developed By GCodDev</p>
             </div>
             <div class="col-md-7 text-md-right align-self-center mt-lg-0 mt-3">
-              <p>© Copyrights 2021 Edumen All rights reserved.</p>
+              <p>© Copyrights 2022 SIE_UPEA All rights reserved.</p>
             </div>
           </div>
         </div>

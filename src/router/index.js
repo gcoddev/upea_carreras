@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+// const array = require('./../pages')
 
+// let res = await this.axios.get("/api/cursosAll/" + this.id_carrera);
 const routes = [
   {
     path: '/',
@@ -12,7 +14,7 @@ const routes = [
         component: () => import('@/views/HomeCustom.vue')
       },
       {
-        path: '/courses',
+        path: '/CURSOS',
         name: 'courses',
         component: () => import('@/views/CoursesView.vue')
       },
